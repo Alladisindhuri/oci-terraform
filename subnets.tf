@@ -24,7 +24,7 @@ resource "oci_core_subnet" "private_subnet" {
   cidr_block          = "10.0.2.64/26"
   dns_label           = "flippvtsub"
   
-  route_table_id      = "ocid1.routetable.oc1.iad.aaaaaaaadb77t4phfsmre7xuxzjfzmgue7elkgembeh5nnkfl7dij647xmua"
+  route_table_id      = "ocid1.routetable.oc1.iad.aaaaaaaajmuzzr5xytuvtl4n3a4i4bgppfo5njtaoztpav6fkcehbvwnin2a"
   security_list_ids   = ["ocid1.securitylist.oc1.iad.aaaaaaaahswwmtvqxxpd6aqsjzu42jghnjfs6fc2cgw5f7lnpsiechpqqlaa"]
   
   prohibit_internet_ingress = true
