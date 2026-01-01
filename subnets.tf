@@ -9,8 +9,6 @@ resource "oci_core_subnet" "public_subnet" {
   route_table_id      = "ocid1.routetable.oc1.iad.aaaaaaaadb77t4phfsmre7xuxzjfzmgue7elkgembeh5nnkfl7dij647xmua"
   security_list_ids   = ["ocid1.securitylist.oc1.iad.aaaaaaaahswwmtvqxxpd6aqsjzu42jghnjfs6fc2cgw5f7lnpsiechpqqlaa"]
   
-  prohibit_public_ip_on_instance = false
-
   defined_tags = {
     "Flip_Application.env" = "prod"
   }
