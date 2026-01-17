@@ -12,3 +12,8 @@ resource "oci_core_drg_attachment" "hub_vcn_attachment" {
   display_name   = "hub-vcn-attachment"
 }
 
+resource "oci_core_drg_attachment" "flip_vcn_attachment" {
+  drg_id         = oci_core_drg.Hub_to_Spoke_drg.id
+  vcn_id         = oci_core_virtual_network.vcn.id
+  display_name   = "flip-vcn-attachment"
+}
