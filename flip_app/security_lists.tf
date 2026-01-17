@@ -1,7 +1,7 @@
 # security list for public subnet
 resource "oci_core_security_list" "public_sl" {
-  compartment_id = "ocid1.compartment.oc1..aaaaaaaaa3iwusb6nkibnr6lhi54oqdxzwr5awarpzl66gkoavowd35435bq"
-  vcn_id         = "ocid1.vcn.oc1.iad.amaaaaaanzgirfaa6nrxo6nrf3dvttchfvi4gkko3ubx73mv53eguinj62xq"
+  compartment_id = oci_identity_compartment.Flip-network-compartment.id  # Flip-network-compartment OCID
+  vcn_id         = oci_core_virtual_network.vcn.id
   display_name   = "flip-public-security-list"
 
   ingress_security_rules {

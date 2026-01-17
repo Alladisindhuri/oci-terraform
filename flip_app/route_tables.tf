@@ -1,5 +1,5 @@
 resource "oci_core_route_table" "flip_vcn_public_rt" {
-  compartment_id = "ocid1.compartment.oc1..aaaaaaaaa3iwusb6nkibnr6lhi54oqdxzwr5awarpzl66gkoavowd35435bq"
+  compartment_id = oci_identity_compartment.Flip-network-compartment.id  #flip_network-compartment OCID
   vcn_id         = oci_core_virtual_network.vcn.id
   display_name   = "flip-vcn-public-rt"
 
