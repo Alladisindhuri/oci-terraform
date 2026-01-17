@@ -5,3 +5,10 @@ resource "oci_core_drg" "Hub_to_Spoke_drg" {
     "Flip_Application.env" = "prod"
   }
 }
+
+resource "oci_core_drg_attachment" "hub_vcn_attachment" {
+  drg_id         = oci_core_drg.Hub_to_Spoke_drg.id
+  vcn_id         = "ocid1.vcn.oc1.iad.amaaaaaanzgirfaaniddguce72cfu6uv3ygkfznnelp4vgaibbgxtv6wyx4a"
+  display_name   = "hub-vcn-attachment"
+}
+
