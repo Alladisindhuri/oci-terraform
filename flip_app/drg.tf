@@ -17,3 +17,5 @@ resource "oci_core_drg_attachment" "flip_vcn_attachment" {
   vcn_id         = oci_core_virtual_network.vcn.id
   display_name   = "flip-vcn-attachment"
 }
+
+
