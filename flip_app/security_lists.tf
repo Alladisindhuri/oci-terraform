@@ -6,13 +6,15 @@ resource "oci_core_security_list" "public_sl" {
 
   ingress_security_rules {
     protocol    = "6"   # 6 is the protocol number for TCP
-    source      = "0.0.0.0/0"
+    source      = "10.0.0.0/24"
     source_type = "CIDR_BLOCK"
-    description = "Allow SSH from all sources"
+    description = "Allow SSH from Hub Public Subnet"
     tcp_options {
       min = 22
       max = 22
     }
+
+
   }
 
   egress_security_rules {
