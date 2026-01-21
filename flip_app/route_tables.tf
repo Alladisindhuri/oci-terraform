@@ -13,4 +13,11 @@ resource "oci_core_route_table" "flip_vcn_public_rt" {
   defined_tags = {
     "Flip_Application.env" = "prod"
   }
+
+  route_rules {
+    destination       = "10.0.0.0/24"
+    destination_type  = "CIDR_BLOCK"
+    network_entity_id = oci_core_drg.Hub_to_Spoke_drg.id
+    description       = "Attaching Flip_Public_Subnet to Hub_VCN via DRG"
+  }
 }
