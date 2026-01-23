@@ -13,7 +13,13 @@ resource "oci_core_route_table" "Skillup_vcn_app_rt" {
   defined_tags = {
     "Skillup_tags.env" = "prod"
     "Skillup_tags.owner" = "sindhuri"
-  }                     
+  }
 
+  route_rules {
+    destination       = "10.0.2.0/29" # Flip Subnet CIDR
+    destination_type  = "CIDR_BLOCK"
+    network_entity_id = "ocid1.drg.oc1.iad.aaaaaaaamj5tqzsegctlhrpxqvadcz34zyakj77xd27wotkys6ylx6wcddhq" # DRG OCID
+    description = "Route to Flip via DRG"
+    }             
   
 }
