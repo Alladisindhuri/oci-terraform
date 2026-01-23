@@ -4,10 +4,10 @@ resource "oci_core_route_table" "flip_vcn_public_rt" {
   display_name   = "flip-vcn-public-rt"
 
   route_rules {
-    destination       = "0.0.0.0/0"
+    destination       = "10.0.3.0/29"
     destination_type  = "CIDR_BLOCK"
-    network_entity_id = "ocid1.internetgateway.oc1.iad.aaaaaaaakzksfcicys77hn3e4tk3romlxrhzoco3toxartes7qji4yafqqya"
-    description = "Route all internet traffic to Internet Gateway"
+    network_entity_id = oci_core_drg.Hub_to_Spoke_drg.id
+    description = "Route Traffic from Flip_VCN to Skillup_ via DRG"
     }
 
   defined_tags = {
