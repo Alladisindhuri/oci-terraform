@@ -6,7 +6,7 @@ resource "oci_core_route_table" "Skillup_vcn_app_rt" {
   route_rules {
     destination       = "10.0.0.0/24" # Hub VCN CIDR
     destination_type  = "CIDR_BLOCK"
-    network_entity_id = "ocid1.drg.oc1.iad.aaaaaaaamj5tqzsegctlhrpxqvadcz34zyakj77xd27wotkys6ylx6wcddhq" # DRG OCID
+    network_entity_id = local.drg_ocid # DRG OCID
     description = "Route to Hub VCN via DRG"
     }
 
@@ -18,7 +18,7 @@ resource "oci_core_route_table" "Skillup_vcn_app_rt" {
   route_rules {
     destination       = "10.0.2.0/29" # Flip Subnet CIDR
     destination_type  = "CIDR_BLOCK"
-    network_entity_id = "ocid1.drg.oc1.iad.aaaaaaaamj5tqzsegctlhrpxqvadcz34zyakj77xd27wotkys6ylx6wcddhq" # DRG OCID
+    network_entity_id = local.drg_ocid # DRG OCID
     description = "Route to Flip via DRG"
     }             
   
