@@ -6,7 +6,6 @@ resource "oci_core_subnet" "subnet" {
   display_name        = var.subnet_display_name # subnet display name
   cidr_block          = var.subnet_cidr_block # subnet CIDR block
   dns_label           = var.subnet_dns_label # subnet DNS label
-  
   route_table_id      = var.subnet_route_table_id
   security_list_ids   = var.subnet_security_list_ids
   

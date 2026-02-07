@@ -50,5 +50,5 @@ variable "subnet_route_table_id" {
 
 variable "subnet_security_list_ids" {
     description = "A list of OCIDs of security lists to associate with the subnet"
-    type = string
+    type = array(string)
 }
