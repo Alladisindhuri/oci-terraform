@@ -13,7 +13,7 @@ resource "oci_core_virtual_network" "vcn" {
 */
 
 module "vcn" {
-  source = "./module"
+  source = "d:/Cloud Architect course/Terraform/oci-terraform/module"
   vcn_compartment_id = oci_identity_compartment.Flip-network-compartment.id  # Flip-network-compartment OCID
   vcn_display_name   = "flip-vcn" # Flip_application VCN display name
   vcn_cidr_block     = "10.0.2.0/24" # Flip_application VCN CIDR block
