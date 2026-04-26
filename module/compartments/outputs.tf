@@ -1,7 +1,7 @@
-output "id" {
+output "compartment_id" {
   value = oci_identity_compartment.compartment.id
 }
 
-output "name" {
+output "compartment_name" {
   value = oci_identity_compartment.compartment.name
 }
