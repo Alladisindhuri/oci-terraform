@@ -6,7 +6,7 @@ resource "oci_core_virtual_network" "vcn" {
   dns_label      = var.vcn_dns_label       # vcn dns label 
 
   defined_tags = {
-    "Flip_Application.env" = local.env  # Using the environment variable from locals.tf for tagging
+    "TravelApp.env" = local.env  # Using the environment variable from locals.tf for tagging
   }
 }
 
