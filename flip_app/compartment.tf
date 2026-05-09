@@ -30,7 +30,7 @@ resource "oci_identity_compartment" "Flip_Compute_and_Storage-compartment" {
   compartment_id = oci_identity_compartment.Flip-compartment.id # Flip-compartment OCID(parent compartment OCID)
 
   defined_tags = {
-    "Flip_Application.env" = "prod"
+    "Flip_Application.env" = "uat"
   }
 
 }
